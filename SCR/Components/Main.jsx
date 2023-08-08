@@ -10,6 +10,7 @@ import BIENVENIDA_3 from './Bienvenida_3.jsx'
 import BIENVENIDA_4 from './Bienvenida_4.jsx'
 import PEDIR_NUMERO from './Login_Registro/Pnt_PedirNumero.jsx';
 import COD_VERIFICACION from './Login_Registro/Cod_Verificacion.jsx'
+import Api_G_Maps from './Api.jsx'
 import C_A from '../Patrones_Diseño/ComponenteA.js'
 import C_B from '../Patrones_Diseño/ComponenteB.js'
 import { CustomTabBar, SelectedTabBar } from '../Patrones_Diseño/Barra_navegacion.jsx'
@@ -44,6 +45,7 @@ const Main = () => {
                 </Stack.Screen>
                 <Stack.Screen name="PEDIR_NUMERO" component={PEDIR_NUMERO} options={{ headerShown: false }} />
                 <Stack.Screen name="COD_VERIFICACION" component={COD_VERIFICACION} options={{ headerShown: false }} />
+                <Stack.Screen name="Api_G_Maps" component={Api_G_Maps} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

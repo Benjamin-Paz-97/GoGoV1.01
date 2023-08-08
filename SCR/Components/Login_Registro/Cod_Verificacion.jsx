@@ -13,7 +13,7 @@ const VerificationCode = () => {
         const enteredCode = code.join('');
         if (enteredCode === '1234') {
             setMessage('Código verificado exitosamente');
-            navigation.navigate('C_B');
+            navigation.navigate('Api_G_Maps');
         } else {
             setMessage('Código incorrecto');
         }

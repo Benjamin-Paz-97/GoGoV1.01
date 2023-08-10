@@ -5,6 +5,6 @@ import MapView from 'react-native-maps'
 import { View,StyleSheet} from 'react-native';
 
 export default function App(){
-  return <Main/>
+  return <Api/>
   }
   

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import MapView, { Marker, Polyline } from 'react-native-maps'
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-
-const G_Maps = () => {
+const G_Maps = ({ navigation }) => {
     const [origin, setOrigin] = React.useState({
         latitud: -9.298135,
         longitud: - 76.000287,
@@ -12,8 +12,15 @@ const G_Maps = () => {
         latitud: -9.301730,
         longitud: - 76.001047,
     });
+    const handleBackButton = () => {
+        navigation.goBack(); // Regresar a la pantalla anterior
+    };
     return (
+
         <View style={styles.container}>
+            <TouchableOpacity onPress={handleBackButton} style={styles.arrowButton}>
+                <Icon name="chevron-left" size={24} color="black" />
+            </TouchableOpacity>
             <MapView
                 style={styles.map}
                 initialRegion={{
@@ -23,29 +30,6 @@ const G_Maps = () => {
                     longitudeDelta: 0.04
                 }}
             >
-                <Marker
-                    ///  draggable
-                    ///   coordinate={origin}
-                    ///    onDragEnd={(e) => setOrigin(e.nativeEvent.coordinate)}
-                    /// image={require('../assets/position.png')}
-                    draggable
-                    coordinate={{
-                        latitude: origin.latitud, // Ajusta las coordenadas en una pequeña cantidad
-                        longitude: origin.longitud,
-                    }}
-                    image={require('../assets/position.png')}
-                    onDragEnd={(e) => setDestination(e.nativeEvent.coordinate)}
-
-                />
-                <Marker
-                    draggable
-                    coordinate={destination}
-                    onDragEnd={(e) => setDestination(e.nativeEvent.coordinate)}
-                />
-                <Polyline
-                    coordinates={[origin, destination]}
-                    strokeWidth={8}
-                />
             </MapView>
         </View>
     );
@@ -60,7 +44,7 @@ const styles = StyleSheet.create({
     },
     map: {
         width: '100%',
-        height: '100%'
+        height: '85%'
     }
 })
 

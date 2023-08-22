@@ -2,9 +2,6 @@ import React from 'react';
 import { View, Text, TouchableOpacity, ImageBackground, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 const HomeScreen = ({ navigation }) => {
-    const handleNextScreen = () => {        
-        navigation.navigate('BIENVENIDA_3');
-    };
     const handleBackButton = () => {
         navigation.goBack(); // Regresar a la pantalla anterior
     };

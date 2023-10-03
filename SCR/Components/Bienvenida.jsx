@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ImageBackground, StyleSheet, Dimensions } from 'react-native';
 
+
+const startTime = Date.now();
 const WelcomeScreen = ({ navigation }) => {
     const Go_Bienvenida_2 = () => {
-        
+
         navigation.navigate('Tabs');// Reemplaza 'NextScreen' con el nombre de tu siguiente pantalla
     };
     const screenHeight = Dimensions.get('window').height;
@@ -22,7 +24,8 @@ const WelcomeScreen = ({ navigation }) => {
         </TouchableOpacity>
     );
 };
-
+const endTime = Date.now();
+console.log(`Tiempo de ejecución: ${endTime - startTime} milisegundos`);
 const styles = StyleSheet.create({
     container: {
         flex: 1,

@@ -11,15 +11,12 @@ import BIENVENIDA_4 from './Bienvenida_4.jsx'
 import PEDIR_NUMERO from './Login_Registro/Pnt_PedirNumero.jsx';
 import COD_VERIFICACION from './Login_Registro/Cod_Verificacion.jsx'
 import Api_G_Maps from './Api.jsx'
-import C_A from '../Patrones_Diseño/ComponenteA.js'
-import C_B from '../Patrones_Diseño/ComponenteB.js'
-import { CustomTabBar, SelectedTabBar } from '../Patrones_Diseño/Barra_navegacion.jsx'
 
 
 const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
 
-
+const startTime = Date.now();
 const Main = () => {
     return (
         <NavigationContainer>
@@ -52,3 +49,5 @@ const Main = () => {
 }
 
 export default Main
+const endTime = Date.now();
+console.log(`Tiempo de ejecución: ${endTime - startTime} milisegundos`);

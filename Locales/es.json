@@ -1,0 +1,15 @@
+{
+  "translation": {
+  "Register new user": "Registrar nuevo usuario",
+  "DNI": "DNI",
+  "Phone number": "Número de teléfono",
+  "Password": "Contraseña",
+  "REGISTER": "REGISTRAR",
+  "Please enter a DNI": "Por favor ingrese un DNI",
+  "Please enter a phone number": "Por favor ingrese un número de teléfono",
+  "Please enter your password": "Por favor ingrese su contraseña",
+  "Successfully saved": "Guardado exitosamente",
+  "Error while saving": "Error al guardar"
+  }
+}
+

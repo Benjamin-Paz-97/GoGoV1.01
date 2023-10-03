@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ImageBackground, StyleSheet } from 'react-native';
-
+const startTime = Date.now();
 const HomeScreen = ({ navigation }) => {
     const handleNextScreen = () => {
         navigation.navigate('PEDIR_NUMERO');
@@ -19,7 +19,8 @@ const HomeScreen = ({ navigation }) => {
         </ImageBackground>
     );
 };
-
+const endTime = Date.now();
+console.log(`Tiempo de ejecución: ${endTime - startTime} milisegundos`);
 const styles = StyleSheet.create({
     backgroundImage: {
         flex: 1,

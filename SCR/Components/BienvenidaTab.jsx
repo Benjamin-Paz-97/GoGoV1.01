@@ -8,9 +8,8 @@ import BIENVENIDA_3 from './Bienvenida_3.jsx'
 import BIENVENIDA_4 from './Bienvenida_4.jsx'
 
 const Tab = createMaterialTopTabNavigator();
-
-const BienvenidaTab = ()  => {
-    return(
+const BienvenidaTab = () => {
+    return (
         <Tab.Navigator tabBarOptions={{
             showLabel: false, // Ocultar los nombres de las pantallas en la barra de navegación
         }}>
@@ -20,5 +19,4 @@ const BienvenidaTab = ()  => {
         </Tab.Navigator>
     )
 }
-
 export default BienvenidaTab
